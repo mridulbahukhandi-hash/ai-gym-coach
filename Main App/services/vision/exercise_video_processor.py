@@ -21,7 +21,15 @@ class VideoProcessorClass(VideoProcessorBase):
         self._latest_metrics = None
         self._exercise_type = "Squats"
 
-        model_path = os.path.join(os.getcwd(), "ml_models", "pose_landmarker_full.task")
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        model_path = os.path.abspath(os.path.join(script_dir, "..", "..", "ml_models", "pose_landmarker_full.task"))
+
+        if not os.path.isfile(model_path):
+            raise FileNotFoundError(
+                f"Pose Landmarker model not found at {model_path}. "
+                "Ensure the file exists in Main App/ml_models."
+            )
+
         base_option = python.BaseOptions(model_asset_path=model_path)
 
         options = vision.PoseLandmarkerOptions(
