@@ -3,12 +3,13 @@
 ========================================================= */
 
 .stApp {
-  background-color: #0A0D14;
+  background: radial-gradient(circle at 85% 0%, #33250b 0%, #0d0d0d 32%, #050505 100%);
   color: #fff;
 }
 
 [data-testid="stSidebar"] {
-  background-color: #111520;
+  background: linear-gradient(180deg, #17120a 0%, #090909 70%);
+  border-right: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 /* =========================================================
@@ -26,7 +27,7 @@
 
 .block-container {
   padding: 50px 3rem !important;
-  max-width: 750px !important;
+  max-width: 900px !important;
 }
 
 /* =========================================================
@@ -37,10 +38,19 @@ button,
 .stButton button,
 .stDownloadButton button,
 .MuiBox-root button {
-  background-color: #181D2A !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 0 !important;
+  background: linear-gradient(135deg, #d4af37, #9b7417) !important;
+  border: 1px solid #e6c45a !important;
+  border-radius: 4px !important;
+  color: #090909 !important;
+  font-weight: 700 !important;
   font-family: 'AdobeClean', sans-serif !important;
+}
+
+button:hover,
+.stButton button:hover,
+.stDownloadButton button:hover {
+  background: linear-gradient(135deg, #f1d477, #c49a28) !important;
+  border-color: #f1d477 !important;
 }
 
 /* =========================================================
@@ -65,10 +75,10 @@ code,
 ========================================================= */
 
 [data-testid="stMetric"] {
-  background-color: #181D2A;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, #211a0d, #100e09);
+  border: 1px solid rgba(212, 175, 55, 0.35);
   padding: 1rem 1.2rem;
-  border-radius: 0;
+  border-radius: 6px;
 }
 
 [data-testid="stMetric"] div {
@@ -79,7 +89,8 @@ code,
 
 [data-testid="stMetricValue"] {
   font-size: 1.5rem !important;
-  font-weight: 400 !important;
+  color: #e6c45a !important;
+  font-weight: 700 !important;
 }
 
 [data-testid="stMetricLabel"] {
@@ -176,6 +187,15 @@ div[role="menuitem"] {
 .stForm {
   margin-top: 2rem !important;
   padding: 1.5rem 1rem !important;
-  background-color: #181D2A !important;
+  background: linear-gradient(145deg, #211a0d, #100e09) !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
   color: #fff;
+}
+
+h1, h2, h3 {
+  color: #e6c45a !important;
+}
+
+[data-testid="stCaptionContainer"] {
+  color: #c9b57a !important;
 }

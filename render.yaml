@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-gym-coach
+    env: python
+    plan: free
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: |
+      cd "Main App" && streamlit run main.py --server.address 0.0.0.0 --server.port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false

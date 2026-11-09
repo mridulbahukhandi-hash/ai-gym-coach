@@ -20,16 +20,17 @@ from services.coaching.llm import LLMCoach
 from services.coaching.tts import TextToSpeech
 from services.coaching.voice_pipeline import VoicePipeline, autoplay_audio
 
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
   
 def main():
     st.set_page_config(
-        page_title="AI Real-time GYM Coach",
+        page_title="Fitness Coach",
         initial_sidebar_state="expanded",
         layout="centered"
     )
 
-    load_css(os.path.join(os.getcwd(), "static", "style.css"))
-    inject_local_font(os.path.join(os.getcwd(), "static", "AdobeClean.otf"), "AdobeClean")
+    load_css(os.path.join(APP_DIR, "static", "style.css"))
+    inject_local_font(os.path.join(APP_DIR, "static", "AdobeClean.otf"), "AdobeClean")
 
     init_db()
 
@@ -55,7 +56,7 @@ def main():
     workout_started = st.session_state.get("workout_started", False)
     
     with st.sidebar:
-        st.title("AI Coach")
+        st.title("Fitness Coach")
 
         if st.session_state.username:
             st.caption(f" Login as {st.session_state.username}")
@@ -168,8 +169,8 @@ def main():
                 st.metric("Torso Angle", f"{st.session_state.torso_angle}°")
                 st.metric("Balance Status", st.session_state.balance_status)
 
-    st.title("AI Real-time GYM Coach")
-    st.markdown("#### Real-time pose detection with proactive AI voice coaching")
+    st.title("Fitness Coach")
+    st.markdown("#### Your personal real-time AI training partner")
  
     if st.session_state.get("audio_to_play"):
         autoplay_audio(st.session_state.audio_to_play)
@@ -188,8 +189,6 @@ def main():
                 text-align: center;
                 color: #888;
                 margin-top: 32px;
-                margin-bottom: 32px;
-            ">
                 <h2 style="color:#ccc; margin-bottom:8px;">👈 Set your workout plan</h2>
                 <p style="font-size:1.05rem;">
                     Choose your exercise, sets and reps in the sidebar,<br>

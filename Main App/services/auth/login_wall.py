@@ -6,8 +6,8 @@ def render_login_wall():
     if st.session_state.get("user_id") is not None:
         return True
     
-    st.title("AI Real-time GYM Trainer")
-    st.markdown("### Welcome! Please enter a username to start.")
+    st.title("Fitness Coach")
+    st.markdown("### Welcome to your personal training space.")
 
     with st.form("login_form", clear_on_submit=False):
         username = st.text_input("Name (unique)", placeholder="unique name e.g. Mridul Bahukhandi")

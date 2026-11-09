@@ -93,7 +93,5 @@ class VoicePipeline:
 def autoplay_audio(audio_bytes):
     if not audio_bytes:
         return
-    
-    st.markdown("<style>[data-testid='stAudio'] {display: none;}</style>", unsafe_allow_html=True)
-    
+
     st.audio(audio_bytes, format="audio/mp3", autoplay=True)
