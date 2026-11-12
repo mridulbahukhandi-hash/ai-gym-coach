@@ -61,7 +61,7 @@ A real-time AI-powered fitness coaching application that uses pose detection and
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/shradha-khapra/ai-gym-coach.git
+   git clone https://github.com/mridulbahukhandi-hash/ai-gym-coach.git
    cd ai-gym-coach
    ```
 
