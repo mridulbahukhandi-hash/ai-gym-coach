@@ -2,6 +2,31 @@
 
 A real-time AI-powered fitness coaching application that uses pose detection and computer vision to analyze your workout form and provide instant feedback. Built with Streamlit, MediaPipe, and Groq AI.
 
+**Repository:** <https://github.com/mridulbahukhandi-hash/ai-gym-coach>
+**Maintainer:** Mridul Bahukhandi
+
+## Project history and attribution
+
+This repository contains a collaborative AI Gym Coach codebase. Its Git
+history preserves earlier contributions from `shradha-khapra`; later commits
+under this repository added project packaging, dependency files, deployment
+configuration, and documentation updates. The project is therefore presented
+as an adapted and extended team codebase, not as code written entirely from
+scratch by one person.
+
+See [SOURCE_ATTRIBUTION.md](SOURCE_ATTRIBUTION.md) for the repository history
+and licensing status that should be reviewed before redistribution.
+
+## My contributions
+
+My work in this repository includes:
+
+- Organizing the Streamlit application into the `Main App` structure.
+- Adding root dependency and system-package configuration for deployment.
+- Preparing the Docker and Render deployment configuration.
+- Adding environment-variable documentation and protecting `.env` files.
+- Updating the repository setup instructions and deployment documentation.
+
 ## Features
 
 - **Real-time Pose Detection**: Uses MediaPipe to detect body landmarks in real-time via webcam
